@@ -111,7 +111,7 @@
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="..">Urtzi Diaz Arberas</a>
+          <a class="navbar-brand" href="..">Gaizka Garralda Diaz</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -155,20 +155,49 @@
 			<article id="ejer2_1">
 				<h3>Ejercicio 2.1</h3>
 				<?php 
-						//TO-DO
-						?>
+					require_once __DIR__.'/../recursos/bombilla.php';
+          $bombilla = new bombilla();
+
+          $bombilla->encender();
+          $bombilla->apagar();
+
+					?>
 			</article>
 			<article id="ejer2_2">
 				<h3>Ejercicio 2.2</h3>
 				<?php 
-						//TO-DO
+          require_once "../recursos/trigonometria.php";
+
+          $cateto1 = 10;
+          $cateto2 = 15;
+
+          $hipotenusa = calculaHipotenusa($cateto1, $cateto2);
+
+        echo "Cateto 1: $cateto1<br>";
+        echo "Cateto 2: $cateto2<br>";
+        echo "La hipotenusa del triángulo rectángulo es: $hipotenusa";
+
+
 						?>
 			</article>
 			<article id="ejer2_3">
 				<h3>Ejercicio 2.3</h3>
-				<?php 
-						//TO-DO
-						?>
+				<?php
+        require_once "../recursos/cubo.php";
+
+        $cubo = new Cubo(3.0);
+
+        echo "Cubo creado con tamaño 3.0<br>";
+
+        $cubo->revolver();
+
+        if ($cubo->getRevuelto()) {
+          echo "El cubo está revuelto.";
+        } else {
+        echo "El cubo está resuelto.";
+}
+      ?>
+
 			</article>
 			<article id="ejer2_4">
 				<h3>Ejercicio 2.4</h3>
